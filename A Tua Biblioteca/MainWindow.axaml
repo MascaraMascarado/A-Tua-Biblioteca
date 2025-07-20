@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="A_Tua_Biblioteca.MainWindow"
+        Title="A_Tua_Biblioteca"
+		WindowStartupLocation="CenterScreen">
+
+
+	<DockPanel>
+		<Menu DockPanel.Dock="Top" >
+			<MenuItem Header="Livros">
+				<MenuItem Header="Listar">
+					<MenuItem Header="Livres" Click="ListarLivrosLivresClick"/>
+					<MenuItem Header="Todos" Click="ListarLivroClick"/>
+				</MenuItem>
+				<MenuItem Header="Criar" Click="CriarLivroClick"/>
+			</MenuItem>
+			<MenuItem Header="Usuários">
+				<MenuItem Header="Listar" Click="ListarUsuariosClick"/>
+				<MenuItem Header="Criar " Click="CriarUsuariosClick"/>
+			</MenuItem>
+			<MenuItem Header="Empréstimos" >
+				<MenuItem Header="Listar" Click="ListarEmprestimosClick" />
+				<MenuItem Header="Criar" Click="CriarEmprestimoClick"/>
+			</MenuItem>
+		</Menu>
+		<ContentControl x:Name="MessageContainer">
+		<ContentControl x:Name="MainContent">
+		<TextBlock  Text="A Tua Biblioteca."
+           FontSize="34"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Center"/>
+		</ContentControl>
+		</ContentControl>
+	</DockPanel>
+</Window>
